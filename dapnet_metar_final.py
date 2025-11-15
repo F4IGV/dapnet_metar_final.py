@@ -17,7 +17,7 @@ TX_GROUP = "f-53"  # groupe de relais DAPNET (ex: fr-all, dl-all, hb9-all)
 DAPNET_URL = "https://hampager.de/api/calls"
 
 # --- CONFIG METAR ---
-ICAO = "LFRN"  # Rennes
+ICAO = "LFRN"  # choose your airport (Rennes city by default)
 METAR_URL = f"https://tgftp.nws.noaa.gov/data/observations/metar/stations/{ICAO}.TXT"
 
 
@@ -68,7 +68,7 @@ def send_dapnet_message(message, callsigns):
             auth=(DAPNET_USER, DAPNET_PASS),
             headers=headers,
             data=json.dumps(payload),
-            timeout=10
+            timeout=30
         )
         r.raise_for_status()
         print(f"[OK] Message envoyé à {', '.join(callsigns)} ({r.status_code}) : {message}")
@@ -103,3 +103,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
