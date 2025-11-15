@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
+F4IGV et son amis Chat GPT presentent
 metar_to_dapnet.py
-Récupère le METAR de l'aéroport de Rennes (LFRN) et envoie un message via DAPNET.
+Récupère le METAR de l'aéroport de selectionner et envoie un message via DAPNET.
 """
 
 import requests
@@ -105,3 +106,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
