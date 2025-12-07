@@ -6,6 +6,9 @@ This Python script retrieves the latest METAR report from a selected airport (de
 
 The script is simple, fast, lightweight, and ideal for amateur radio operators who want aviation weather updates on their POCSAG pagers.
 
+This script can be automated on Windows using Task Scheduler together with the `.bat` file included in this repository.  
+The user must edit the `.bat` file and specify the full path to the `.py` script so automation works correctly.
+
 ---
 
 ## Features
